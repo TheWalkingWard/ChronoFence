@@ -33,7 +33,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.ChronoFence.Form1
+            Me.MainForm = Global.ChronoFence.Main_Menu
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
