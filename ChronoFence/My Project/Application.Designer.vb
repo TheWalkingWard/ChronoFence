@@ -35,12 +35,11 @@ Namespace My
         Protected Overrides Sub OnCreateMainForm()
             Me.MainForm = Global.ChronoFence.Main_Menu
         End Sub
-        
-        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
+
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
         Protected Overrides Sub OnCreateSplashScreen()
-            Me.SplashScreen = Global.ChronoFence.Splasher
         End Sub
-        
+
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Function OnInitialize(ByVal commandLineArgs As System.Collections.ObjectModel.ReadOnlyCollection(Of String)) As Boolean
             Me.MinimumSplashScreenDisplayTime = 5000
