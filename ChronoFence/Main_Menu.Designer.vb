@@ -29,6 +29,7 @@ Partial Class Main_Menu
         digiclock = New Label()
         tod = New PictureBox()
         TableLayoutPanel1 = New TableLayoutPanel()
+        Label1 = New Label()
         CType(tod, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel1.SuspendLayout()
         SuspendLayout()
@@ -85,11 +86,22 @@ Partial Class Main_Menu
         TableLayoutPanel1.Size = New Size(300, 100)
         TableLayoutPanel1.TabIndex = 5
         ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 14F)
+        Label1.Location = New Point(0, 116)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(178, 25)
+        Label1.TabIndex = 6
+        Label1.Text = "Activation Schedule"
+        ' 
         ' Main_Menu
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(Label1)
         Controls.Add(TableLayoutPanel1)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "Main_Menu"
@@ -98,10 +110,12 @@ Partial Class Main_Menu
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
     Friend WithEvents realclock As Timer
     Friend WithEvents current_date As Label
     Friend WithEvents digiclock As Label
     Friend WithEvents tod As PictureBox
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents Label1 As Label
 End Class
