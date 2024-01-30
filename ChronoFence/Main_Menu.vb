@@ -24,4 +24,6 @@
             tod.Image = My.Resources.ResourceManager.GetObject("day")
         End If
     End Sub
+
+
 End Class
