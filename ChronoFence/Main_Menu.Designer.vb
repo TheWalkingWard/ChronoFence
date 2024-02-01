@@ -41,10 +41,17 @@ Partial Class Main_Menu
         Label3 = New Label()
         PictureBox5 = New PictureBox()
         PictureBox6 = New PictureBox()
-        FromTextbox = New TextBox()
-        ToTextbox = New TextBox()
         StartButton = New Button()
         StopButton = New Button()
+        fromhh = New ComboBox()
+        frommm = New ComboBox()
+        fromtt = New ComboBox()
+        tott = New ComboBox()
+        tomm = New ComboBox()
+        tohh = New ComboBox()
+        Settime = New Button()
+        statusbox = New PictureBox()
+        testf = New Button()
         CType(tod, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -52,6 +59,7 @@ Partial Class Main_Menu
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
+        CType(statusbox, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' realclock
@@ -141,6 +149,8 @@ Partial Class Main_Menu
         ScheduleStartTextbox.Name = "ScheduleStartTextbox"
         ScheduleStartTextbox.Size = New Size(136, 27)
         ScheduleStartTextbox.TabIndex = 11
+        ScheduleStartTextbox.Text = "12:00 AM"
+        ScheduleStartTextbox.TextAlign = HorizontalAlignment.Center
         ' 
         ' ScheduleUntil
         ' 
@@ -174,6 +184,8 @@ Partial Class Main_Menu
         ScheduleUntilTextbox.Name = "ScheduleUntilTextbox"
         ScheduleUntilTextbox.Size = New Size(136, 27)
         ScheduleUntilTextbox.TabIndex = 14
+        ScheduleUntilTextbox.Text = "1:00 AM"
+        ScheduleUntilTextbox.TextAlign = HorizontalAlignment.Center
         ' 
         ' PictureBox4
         ' 
@@ -252,30 +264,12 @@ Partial Class Main_Menu
         PictureBox6.TabIndex = 20
         PictureBox6.TabStop = False
         ' 
-        ' FromTextbox
-        ' 
-        FromTextbox.BackColor = SystemColors.Window
-        FromTextbox.Font = New Font("Bahnschrift SemiBold Condensed", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        FromTextbox.Location = New Point(90, 470)
-        FromTextbox.Name = "FromTextbox"
-        FromTextbox.Size = New Size(98, 27)
-        FromTextbox.TabIndex = 21
-        ' 
-        ' ToTextbox
-        ' 
-        ToTextbox.BackColor = SystemColors.Window
-        ToTextbox.Font = New Font("Bahnschrift SemiBold Condensed", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        ToTextbox.Location = New Point(260, 471)
-        ToTextbox.Name = "ToTextbox"
-        ToTextbox.Size = New Size(98, 27)
-        ToTextbox.TabIndex = 22
-        ' 
         ' StartButton
         ' 
         StartButton.BackColor = Color.Transparent
         StartButton.Font = New Font("Bahnschrift SemiCondensed", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         StartButton.Image = My.Resources.Resources._4749a48027bcef458141768634d00be5
-        StartButton.Location = New Point(90, 554)
+        StartButton.Location = New Point(157, 614)
         StartButton.Margin = New Padding(0)
         StartButton.Name = "StartButton"
         StartButton.Size = New Size(203, 34)
@@ -288,12 +282,97 @@ Partial Class Main_Menu
         StopButton.BackColor = Color.Transparent
         StopButton.Font = New Font("Bahnschrift SemiCondensed", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         StopButton.Image = My.Resources.Resources._7f44006055ccf18af7e6d43ebd748d69
-        StopButton.Location = New Point(90, 594)
+        StopButton.Location = New Point(157, 664)
         StopButton.Name = "StopButton"
         StopButton.Size = New Size(203, 34)
         StopButton.TabIndex = 24
         StopButton.Text = "Stop"
         StopButton.UseVisualStyleBackColor = False
+        ' 
+        ' fromhh
+        ' 
+        fromhh.FormattingEnabled = True
+        fromhh.Items.AddRange(New Object() {"12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"})
+        fromhh.Location = New Point(78, 471)
+        fromhh.Name = "fromhh"
+        fromhh.Size = New Size(36, 23)
+        fromhh.TabIndex = 25
+        ' 
+        ' frommm
+        ' 
+        frommm.FormattingEnabled = True
+        frommm.Items.AddRange(New Object() {"00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"})
+        frommm.Location = New Point(120, 471)
+        frommm.Name = "frommm"
+        frommm.Size = New Size(36, 23)
+        frommm.TabIndex = 26
+        ' 
+        ' fromtt
+        ' 
+        fromtt.Font = New Font("Segoe UI", 8F)
+        fromtt.FormattingEnabled = True
+        fromtt.Items.AddRange(New Object() {"AM", "PM"})
+        fromtt.Location = New Point(162, 471)
+        fromtt.Name = "fromtt"
+        fromtt.Size = New Size(40, 21)
+        fromtt.TabIndex = 27
+        ' 
+        ' tott
+        ' 
+        tott.Font = New Font("Segoe UI", 8F)
+        tott.FormattingEnabled = True
+        tott.Items.AddRange(New Object() {"AM", "PM"})
+        tott.Location = New Point(332, 471)
+        tott.Name = "tott"
+        tott.Size = New Size(40, 21)
+        tott.TabIndex = 30
+        ' 
+        ' tomm
+        ' 
+        tomm.FormattingEnabled = True
+        tomm.Items.AddRange(New Object() {"00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"})
+        tomm.Location = New Point(290, 471)
+        tomm.Name = "tomm"
+        tomm.Size = New Size(36, 23)
+        tomm.TabIndex = 29
+        ' 
+        ' tohh
+        ' 
+        tohh.FormattingEnabled = True
+        tohh.Items.AddRange(New Object() {"12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"})
+        tohh.Location = New Point(248, 471)
+        tohh.Name = "tohh"
+        tohh.Size = New Size(36, 23)
+        tohh.TabIndex = 28
+        ' 
+        ' Settime
+        ' 
+        Settime.Location = New Point(181, 554)
+        Settime.Name = "Settime"
+        Settime.Size = New Size(75, 23)
+        Settime.TabIndex = 0
+        Settime.Text = "Set"
+        Settime.UseVisualStyleBackColor = True
+        ' 
+        ' statusbox
+        ' 
+        statusbox.BackColor = Color.FromArgb(CByte(221), CByte(250), CByte(254))
+        statusbox.Image = My.Resources.Resources.fence_offline
+        statusbox.Location = New Point(24, 554)
+        statusbox.Name = "statusbox"
+        statusbox.Size = New Size(75, 75)
+        statusbox.SizeMode = PictureBoxSizeMode.Zoom
+        statusbox.TabIndex = 31
+        statusbox.TabStop = False
+        ' 
+        ' testf
+        ' 
+        testf.Location = New Point(24, 635)
+        testf.Name = "testf"
+        testf.Size = New Size(75, 47)
+        testf.TabIndex = 32
+        testf.Text = "Test Fault Detection"
+        testf.UseVisualStyleBackColor = True
         ' 
         ' Main_Menu
         ' 
@@ -301,10 +380,17 @@ Partial Class Main_Menu
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.d884313f59e3570229be10a8526d9619
         ClientSize = New Size(378, 709)
+        Controls.Add(testf)
+        Controls.Add(statusbox)
+        Controls.Add(Settime)
+        Controls.Add(tott)
+        Controls.Add(tomm)
+        Controls.Add(tohh)
+        Controls.Add(fromtt)
+        Controls.Add(frommm)
+        Controls.Add(fromhh)
         Controls.Add(StopButton)
         Controls.Add(StartButton)
-        Controls.Add(ToTextbox)
-        Controls.Add(FromTextbox)
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
@@ -323,6 +409,7 @@ Partial Class Main_Menu
         Controls.Add(PictureBox4)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "Main_Menu"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "ChronoFence Dashboard"
         CType(tod, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
@@ -331,6 +418,7 @@ Partial Class Main_Menu
         CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
+        CType(statusbox, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -351,8 +439,15 @@ Partial Class Main_Menu
     Friend WithEvents Label3 As Label
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents FromTextbox As TextBox
-    Friend WithEvents ToTextbox As TextBox
     Friend WithEvents StartButton As Button
     Friend WithEvents StopButton As Button
+    Friend WithEvents fromhh As ComboBox
+    Friend WithEvents frommm As ComboBox
+    Friend WithEvents fromtt As ComboBox
+    Friend WithEvents tott As ComboBox
+    Friend WithEvents tomm As ComboBox
+    Friend WithEvents tohh As ComboBox
+    Friend WithEvents Settime As Button
+    Friend WithEvents statusbox As PictureBox
+    Friend WithEvents testf As Button
 End Class

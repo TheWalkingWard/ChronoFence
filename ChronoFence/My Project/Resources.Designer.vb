@@ -253,6 +253,36 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property fence_active() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("fence_active", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property fence_fault() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("fence_fault", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property fence_offline() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("fence_offline", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property logo() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("logo", resourceCulture)
@@ -286,6 +316,16 @@ Namespace My.Resources
         Friend ReadOnly Property sunriseset() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("sunriseset", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property wait_glass() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("wait_glass", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
