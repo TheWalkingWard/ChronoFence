@@ -51,6 +51,7 @@
         statusbox.Image = My.Resources.ResourceManager.GetObject("fence_offline")
     End Sub
 
+    'Dapat may changes dun sa mismong website ng GitHub
     Private Sub testf_Click(sender As Object, e As EventArgs) Handles testf.Click
         Fault_Window.ShowDialog()
     End Sub
