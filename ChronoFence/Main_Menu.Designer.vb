@@ -45,6 +45,8 @@ Partial Class Main_Menu
         ToTextbox = New TextBox()
         StartButton = New Button()
         StopButton = New Button()
+        LogRichTextBox = New RichTextBox()
+        FencePic = New PictureBox()
         CType(tod, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -52,6 +54,7 @@ Partial Class Main_Menu
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
+        CType(FencePic, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' realclock
@@ -79,7 +82,7 @@ Partial Class Main_Menu
         digiclock.Font = New Font("Bahnschrift Condensed", 38.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         digiclock.ForeColor = SystemColors.HighlightText
         digiclock.Image = My.Resources.Resources.e59178a329eaf5a268d2b86eba410181_removebg_preview2
-        digiclock.Location = New Point(112, 87)
+        digiclock.Location = New Point(98, 81)
         digiclock.Name = "digiclock"
         digiclock.Size = New Size(225, 62)
         digiclock.TabIndex = 1
@@ -91,9 +94,9 @@ Partial Class Main_Menu
         tod.BackColor = Color.Transparent
         tod.BackgroundImage = CType(resources.GetObject("tod.BackgroundImage"), Image)
         tod.Image = My.Resources.Resources.day
-        tod.Location = New Point(48, 92)
+        tod.Location = New Point(24, 81)
         tod.Name = "tod"
-        tod.Size = New Size(66, 58)
+        tod.Size = New Size(68, 62)
         tod.SizeMode = PictureBoxSizeMode.Zoom
         tod.TabIndex = 4
         tod.TabStop = False
@@ -102,7 +105,7 @@ Partial Class Main_Menu
         ' 
         PictureBox1.BackColor = Color.Transparent
         PictureBox1.Image = My.Resources.Resources.e59178a329eaf5a268d2b86eba410181_removebg_preview1
-        PictureBox1.Location = New Point(7, 20)
+        PictureBox1.Location = New Point(24, 31)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(362, 188)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
@@ -136,6 +139,7 @@ Partial Class Main_Menu
         ' ScheduleStartTextbox
         ' 
         ScheduleStartTextbox.BackColor = SystemColors.Window
+        ScheduleStartTextbox.Enabled = False
         ScheduleStartTextbox.Font = New Font("Bahnschrift SemiBold Condensed", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         ScheduleStartTextbox.Location = New Point(24, 291)
         ScheduleStartTextbox.Name = "ScheduleStartTextbox"
@@ -169,6 +173,7 @@ Partial Class Main_Menu
         ' ScheduleUntilTextbox
         ' 
         ScheduleUntilTextbox.BackColor = SystemColors.Window
+        ScheduleUntilTextbox.Enabled = False
         ScheduleUntilTextbox.Font = New Font("Bahnschrift SemiBold Condensed", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         ScheduleUntilTextbox.Location = New Point(224, 291)
         ScheduleUntilTextbox.Name = "ScheduleUntilTextbox"
@@ -295,12 +300,32 @@ Partial Class Main_Menu
         StopButton.Text = "Stop"
         StopButton.UseVisualStyleBackColor = False
         ' 
+        ' LogRichTextBox
+        ' 
+        LogRichTextBox.Location = New Point(405, 327)
+        LogRichTextBox.Name = "LogRichTextBox"
+        LogRichTextBox.Size = New Size(421, 210)
+        LogRichTextBox.TabIndex = 25
+        LogRichTextBox.Text = ""
+        ' 
+        ' FencePic
+        ' 
+        FencePic.Image = My.Resources.Resources.FenceWithoutElectricReal
+        FencePic.Location = New Point(405, 27)
+        FencePic.Name = "FencePic"
+        FencePic.Size = New Size(439, 248)
+        FencePic.SizeMode = PictureBoxSizeMode.Zoom
+        FencePic.TabIndex = 26
+        FencePic.TabStop = False
+        ' 
         ' Main_Menu
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.d884313f59e3570229be10a8526d9619
-        ClientSize = New Size(378, 709)
+        ClientSize = New Size(976, 709)
+        Controls.Add(FencePic)
+        Controls.Add(LogRichTextBox)
         Controls.Add(StopButton)
         Controls.Add(StartButton)
         Controls.Add(ToTextbox)
@@ -331,6 +356,7 @@ Partial Class Main_Menu
         CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
+        CType(FencePic, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -355,4 +381,6 @@ Partial Class Main_Menu
     Friend WithEvents ToTextbox As TextBox
     Friend WithEvents StartButton As Button
     Friend WithEvents StopButton As Button
+    Friend WithEvents LogRichTextBox As RichTextBox
+    Friend WithEvents FencePic As PictureBox
 End Class

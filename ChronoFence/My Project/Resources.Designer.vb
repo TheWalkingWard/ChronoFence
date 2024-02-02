@@ -253,6 +253,56 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property FenceWithElectric() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("FenceWithElectric", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property FenceWithElectricReal() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("FenceWithElectricReal", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property FenceWithElectricRealMosquito() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("FenceWithElectricRealMosquito", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property FenceWithoutElectric() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("FenceWithoutElectric", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property FenceWithoutElectricReal() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("FenceWithoutElectricReal", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property logo() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("logo", resourceCulture)
