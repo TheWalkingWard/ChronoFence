@@ -1,6 +1,10 @@
-﻿Imports System.Globalization
+﻿Imports System.Drawing.Text
+Imports System.Globalization
+Imports System.Runtime.InteropServices
 
 Public Class Main_Menu
+    Public privateFontCollection As New Drawing.Text.PrivateFontCollection
+    Public FamilyName As String
     Private mosquitoTimer As New Timer()
     Private delayTimer As New Timer()
 
@@ -12,6 +16,21 @@ Public Class Main_Menu
 
         delayTimer.Interval = 2000 ' 5 seconds
         AddHandler delayTimer.Tick, AddressOf DelayTimer_Tick
+
+        Dim data As System.IntPtr = Marshal.AllocCoTaskMem(My.Resources.bahnschrift_cond.Length - 1)
+        Marshal.Copy(My.Resources.bahnschrift_cond, 0, data, My.Resources.bahnschrift_cond.Length)
+        privateFontCollection.AddMemoryFont(data, My.Resources.bahnschrift_cond.Length)
+        Marshal.FreeCoTaskMem(data)
+        Dim ban_con_48 As Font = New Font(privateFontCollection.Families(1), 48, FontStyle.Bold)
+        Dim ban_con_14 As Font = New Font(privateFontCollection.Families(1), 14.2)
+        Dim ban_con_27 As Font = New Font(privateFontCollection.Families(1), 27.7, FontStyle.Bold)
+        Dim ban_con_20 As Font = New Font(privateFontCollection.Families(1), 20.25, FontStyle.Bold)
+
+        digiclock.Font = ban_con_48
+        current_date.Font = ban_con_14
+        Label1.Font = ban_con_27
+        Label2.Font = ban_con_20
+        Label3.Font = ban_con_20
     End Sub
 
     Private Sub MosquitoTimer_Tick(sender As Object, e As EventArgs)

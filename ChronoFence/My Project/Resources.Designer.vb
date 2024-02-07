@@ -211,6 +211,26 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property bahnschrift_cond() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("bahnschrift_cond", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property bahnschrift_light() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("bahnschrift_light", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property bd59432c229ffd9d17dbefa285b730f4() As System.Drawing.Bitmap
