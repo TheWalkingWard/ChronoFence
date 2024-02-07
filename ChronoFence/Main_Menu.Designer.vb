@@ -221,7 +221,7 @@ Partial Class Main_Menu
         ' 
         ' FencePic
         ' 
-        FencePic.Image = My.Resources.Resources.FenceWithoutElectricReal
+        FencePic.Image = My.Resources.Resources.fence_off
         FencePic.Location = New Point(479, 106)
         FencePic.Name = "FencePic"
         FencePic.Size = New Size(321, 211)

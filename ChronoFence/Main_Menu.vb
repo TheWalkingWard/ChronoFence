@@ -36,7 +36,7 @@ Public Class Main_Menu
 
         ' Stop the delay timer
         delayTimer.Stop()
-        FencePic.Image = My.Resources.FenceWithElectricReal
+        FencePic.Image = My.Resources.fence_on
 
         ' Re-enable mosquitoTimer
         mosquitoTimer.Start()
@@ -66,7 +66,7 @@ Public Class Main_Menu
                 LogRichTextBox.AppendText($"{currentTime.ToString("h:mm:ss tt")} - The electric fence has been activated.{vbCrLf}")
                 lastScheduleState = True
 
-                FencePic.Image = My.Resources.FenceWithElectricReal
+                FencePic.Image = My.Resources.fence_on
 
                 mosquitoTimer.Start()
             ElseIf Not isScheduledTime AndAlso lastScheduleState Then
@@ -74,7 +74,7 @@ Public Class Main_Menu
                 LogRichTextBox.AppendText($"{currentTime.ToString("h:mm:ss tt")} - The electric fence has been deactivated.{vbCrLf}")
                 lastScheduleState = False
 
-                FencePic.Image = My.Resources.FenceWithoutElectricReal
+                FencePic.Image = My.Resources.fence_off
                 mosquitoTimer.Stop()
                 delayTimer.Stop()
             End If
@@ -132,7 +132,7 @@ Public Class Main_Menu
         End If
 
         LogRichTextBox.AppendText($"{DateTime.Now.ToString("h:mm:ss tt")} - The schedule and/or the electric fence has stopped!{vbCrLf}")
-        FencePic.Image = My.Resources.FenceWithoutElectricReal
+        FencePic.Image = My.Resources.fence_off
         mosquitoTimer.Stop()
         delayTimer.Stop()
     End Sub
