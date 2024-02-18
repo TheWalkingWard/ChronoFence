@@ -12,7 +12,7 @@ Installation:
 1. Install .NET 8.0 Desktop Runtime
 2. Execute ChronoFence.exe
 
-## Linux (x64 Ubuntu 22.04)
+## Linux (x64: Ubuntu 22.04)
 Requirements:
 
 - WINE
@@ -45,9 +45,9 @@ Requirements:
 Installation:
 
 1. Install Homebrew
-   via the macOS Terminal, run this command:
-   `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)`
-   or download and install via macOS package installer:
+   via the macOS Terminal, run this command: <br/>
+   `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)` <br/>
+   or download and install via macOS package installer: <br/>
    <https://github.com/Homebrew/brew/releases>
 2. Install MacPorts
    download and install package for appropriate macOS version:
