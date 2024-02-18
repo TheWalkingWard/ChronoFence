@@ -10,7 +10,7 @@ Requirements:
 Installation:
 
 1. Install .NET 8.0 Desktop Runtime
-2. Execute ChronoFence.exe
+2. Execute **ChronoFence.exe**
 
 ## Linux (x64: Ubuntu 22.04)
 Requirements:
@@ -24,9 +24,10 @@ Requirements:
 
 Installation:
 
-1. Execute linux\_debian\_install.sh to install WINE and Winetricks
+1. Execute **linux\_debian\_install.sh** to install WINE and Winetricks
 2. Install .NET 8.0 Desktop Runtime
-3. Execute ChronoFence.exe or open terminal at file location and enter command: wine ./ChronoFence.exe
+3. Execute **ChronoFence.exe** or open terminal at file location and enter command: <br/>
+   `wine ./ChronoFence.exe`
 
 ## MacOS
 Requirements:
@@ -58,6 +59,6 @@ Installation:
    `brew install --cask --no-quarantine wine-stable`
 4. Install Winetricks
    via the macOS Terminal, run this command:
-   sudo port install winetricks
+   `sudo port install winetricks`
 5. Install .NET 8.0 Desktop Runtime
-6. Execute ChronoFence.exe
+6. Execute **ChronoFence.exe**
